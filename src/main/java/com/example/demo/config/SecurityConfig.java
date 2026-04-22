@@ -22,7 +22,7 @@ public class SecurityConfig {
                 .requestMatchers("/css/**", "/js/**", "/images/**", "/webjars/**").permitAll()
                 
                 // ✅ 2. Allow Public Pages (Login, Kiosk, Storefront)
-                .requestMatchers("/login", "/error").permitAll()
+                .requestMatchers("/", "/login", "/error").permitAll()
                 .requestMatchers("/store.html", "/kiosk.html").permitAll()
 
                 // ✅ 3. CUSTOMER APIs (Safe to be Public)
